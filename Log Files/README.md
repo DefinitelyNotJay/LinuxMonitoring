@@ -7,7 +7,7 @@
 <p style="font-size : 10px; color: red;" align = "center">การอ่านsyslogไฟล์โดยใช้ vi</p>
 <img width="1470" alt="Screenshot 2567-02-07 at 12 09 00" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/2c9b6c08-7d88-49f7-a3f0-14ca8294aa73">
 <p align="center">ตัวอย่าง การอ่านไฟล์โดยใช้ tail</p>
-"***"
+<hr>
 <h2>กลุ่มการเข้าถึงและการยืนยันตัวตน(Access and Authentication)</h2>
 <h3>/var/log/auth.log</h3>
 <ul><li>เป็นlog fileที่แสดงการAuthentication(login), AuthorizationของUser</li></ul>

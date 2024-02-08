@@ -52,6 +52,33 @@
 <img width="401" alt="Screenshot 2567-02-06 at 12 44 03" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/e249c0ec-8212-4a09-ba93-fa0d57221968">
 <p align="center">การอ่านwmtpไฟล์โดยการใช้คำสั่ง last</p>
 
+<h2>กลุ่ม Package Install/uninstall</h2>
+<h3>/var/log/dpkg.log</h3>
+<ul>
+  <li>เก็บทุกการกระทำที่ทำโดยDebian package manager เช่น package installations, upgrades, uninstall</li>
+</ul>
+
+<img width="819" alt="Screenshot 2567-02-06 at 23 08 24" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/0cf1f89f-39c0-4a27-a268-a9fa5c96fab5">
+<p align = "center">ข้อมูลในdpkg.log</p>
+<img width="813" alt="Screenshot 2567-02-06 at 23 15 00" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/0503b5bb-b72f-44a5-a03d-e2b5025aede9">
+<p align = "center">การหาstatus unpackedในdpkg.log file โดยใช้ grep</p>
+
+<h2>กลุ่มSystem log files</h2>
+<h3>/var/log/kern.log</h3>
+<ul>
+  <li>เก็บmessagesที่เกี่ยวกับkernel ช่วยให้การtroubleshooting ปัญหาที่เกิดขึ้นกับstartup, hardware, kernel</li>
+</ul>
+<p align = "center"></p>
+
+<h3>/var/log/dmesg</h3>
+<ul>
+  <li>เก็บข้อมูลที่เกี่ยวกับmessageของkernelที่ได้มาจากkernel ring buffer</li>
+  <li>โดยที่ring bufferเก็บข้อมูลเกี่ยวกับhardware, driverเริ่มต้นของอุปกรณ์, messageจากkernel modulesที่ทำงานตอนstartup</li>
+</ul>
+<p align = "center"></p>
+
+
+
 
 
 

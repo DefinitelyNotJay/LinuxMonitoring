@@ -1,4 +1,5 @@
 <h1>Log Files</h1>
+<p>Log Filesคือไฟล์ทั้งหมดที่อยู่ใน /var/log โดยการที่ระบบจะเก็บการกระทำ, กิจกรรม </p>
 <h2>กลุ่มLog fileหลัก</h2>
 <h3>/var/log/messages(Linux) หรือ /var/log/syslog(Ubuntu)</h3>
 <ul><li>เป็นไฟล์ที่เก็บmessage, activitiesทั้งหมดของระบบในระดับ global</li></ul>
@@ -22,7 +23,9 @@
   <li>เป็นไฟล์ที่ไม่ใช่ASCII</li>
   <li>ใช้คำสั่ง lastlogในการอ่าน</li>
 </ul>
+<img width="1470" alt="Screenshot 2567-02-06 at 11 26 55" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/830e9ec6-9aff-4dd2-9d5e-045e17af1859">
 <p align = "center">lastlogในUbuntuที่เปิดด้วย vi</p>
+<img width="683" alt="Screenshot 2567-02-06 at 11 41 58" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/d6f627be-6322-4ee1-9147-c3c3a156c538">
 <p align = "center">การอ่านไฟล์โดยการใช้คำสั่งlastlog</p>
 
 <h3>/var/log/btmp10</h3>

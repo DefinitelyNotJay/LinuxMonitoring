@@ -68,14 +68,17 @@
 <ul>
   <li>เก็บmessagesที่เกี่ยวกับkernel ช่วยให้การtroubleshooting ปัญหาที่เกิดขึ้นกับstartup, hardware, kernel</li>
 </ul>
-<p align = "center"></p>
+<img width="1470" alt="Screenshot 2567-02-08 at 13 03 44" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/8cd07571-b6ad-4a68-b69e-b949ec2c7c4b">
+<p align = "center">ไฟล์kern.logที่เปิดโดยใช้ vi</p>
 
 <h3>/var/log/dmesg</h3>
 <ul>
   <li>เก็บข้อมูลที่เกี่ยวกับmessageของkernelที่ได้มาจากkernel ring buffer</li>
   <li>โดยที่ring bufferเก็บข้อมูลเกี่ยวกับhardware, driverเริ่มต้นของอุปกรณ์, messageจากkernel modulesที่ทำงานตอนstartup</li>
 </ul>
-<p align = "center"></p>
+<img width="840" alt="Screenshot 2567-02-08 at 13 09 16" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/c7ffefe3-1ed4-410d-8f7f-4ca87b9e337c">
+
+<p align = "center">ไฟล์dmesgที่อ่านโดยการใช้คำสั่งlast</p>
 
 
 

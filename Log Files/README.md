@@ -35,23 +35,21 @@
   <li>sudo last -f btmp</li>
   <li>ต้องเป็น root จึงจะมีสิทธิ์ดูได้</li>
 </ul>
-
+<img width="697" alt="Screenshot 2567-02-06 at 12 20 55" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/957f437f-9a81-4773-9af9-9ce776133210">
 <p align="center">การอ่านไฟล์โดยการใช้คำสั่ง last</p>
 
-<h3>/var/log/wtmp หรือ /var/log/utmp</h3>
+<h3>/var/log/wtmp หรือ /var/log/utmp</h3>กด
 <ul>
   <li>เก็บข้อมูลการ logins/logouts</li>
 </ul>
-
+<img width="687" alt="Screenshot 2567-02-06 at 12 25 06" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/3baa37be-d739-4685-99b4-4fc1b2812a56">
 <p align="center">การอ่านwmtpไฟล์โดยการใช้คำสั่ง last</p>
-
-<p align="center">การอ่านไฟล์โดยการใช้คำสั่ง last</p>
 
 <h3>/var/log/faillog</h3>
 <ul>
   <li>เก็บlog การloginที่ไม่สำเร็จของusers</li>
 </ul>
-
+<img width="401" alt="Screenshot 2567-02-06 at 12 44 03" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/e249c0ec-8212-4a09-ba93-fa0d57221968">
 <p align="center">การอ่านwmtpไฟล์โดยการใช้คำสั่ง last</p>
 
 

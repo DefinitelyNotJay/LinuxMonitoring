@@ -395,16 +395,22 @@ Ex:
 
 <h2>Reference</h2>
 
+-Working with Texts <br>
 https://link.springer.com/chapter/10.1007/978-1-4302-1890-6_4
 
+-vi command <br>
 https://www.guru99.com/the-vi-editor.html
 
+-more <br>
 https://www.geeksforgeeks.org/more-command-in-linux-with-examples/
 
+-less <br>
 https://www.geeksforgeeks.org/less-command-linux-examples/
 
+-tail <br>
 https://www.geeksforgeeks.org/tail-command-linux-examples/?ref=header_search
 
 https://phoenixnap.com/kb/linux-tail
 
+-wc <br>
 https://www.geeksforgeeks.org/wc-command-linux-examples/

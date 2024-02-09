@@ -492,11 +492,11 @@ sed '#,$d' filename.txt
 
 >Reference
 
-[1]https://phoenixnap.com/kb/dmesg-linux#:~:text=The%20dmesg%20command%20is%20a,take%20place%20during%20system%20startup.<br>
-[2]https://ioflood.com/blog/last-linux-command/#:~:text=The%20'last'%20command%20in%20Linux%20is%20used%20to%20display%20the,%5Barguments%5D%20%5Bparameters%5D%20<br>
+[1]https://phoenixnap.com/kb/dmesg-linux<br>
+[2]https://ioflood.com/blog/last-linux-command/<br>
 [3]https://www.baeldung.com/linux/last-command<br>
-[4]https://www.hostinger.com/tutorials/grep-command-in-linux-useful-examples/#:~:text=to%20a%20File-,What%20Is%20the%20grep%20Command%20in%20Linux,see%20which%20lines%20contain%20it.<br>
+[4]https://www.hostinger.com/tutorials/grep-command-in-linux-useful-examples/<br>
 [5]https://saixiii.com/awk-linux-command/<br>
 [6]https://th.linux-console.net/?p=17513<br>
 [7]https://linuxize.com/post/awk-command/<br>
-[8]https://phoenixnap.com/kb/linux-sed#:~:text=The%20Linux%20sed%20command%20is%20most%20commonly%20used%20for%20substituting,%2F%20
+[8]https://phoenixnap.com/kb/linux-sed

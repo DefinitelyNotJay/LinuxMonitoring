@@ -708,63 +708,6 @@ grep -c "hello" xxx.txt
 ผลลัพธ์ :
 
 <img src="grep.png"><br>
-## คำสั่ง grep [option]
-<table>
-<tr>
-    <th>Option</th>
-    <th>Description</th>
-    <th>Examples</th>
-  </tr>
-  <tr>
-    <td><code>-i</code></td>
-    <td>ไม่สนใจตัวอักษรพิมพ์ใหญ่หรือเล็กใน pattern</td>
-    <td><code>grep -i "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-r</code></td>
-    <td>อ่านไฟล์ทั้งหมดในแต่ละไดเรกทอรีและไดเรกทอรีย่อยๆ โดยอัตโนมัติ</td>
-    <td><code>grep -r "pattern" directory</code></td>
-  </tr>
-  <tr>
-    <td><code>-n</code></td>
-    <td>เติมหมายเลขบรรทัดของแต่ละบรรทัดในไฟล์เข้าไปด้วย โดยนับจากบรรทัดแรกเป็นบรรทัดที่ 1</td>
-    <td><code>grep -n "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-v</code></td>
-    <td>เลือกบรรทัดที่ไม่ตรงกับpattern</td>
-    <td><code>grep -v "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-E</code></td>
-    <td>ใช้ regular expressions ขั้นสูง (รองรับ ?, +, {}, () เป็นต้น)</td>
-    <td><code>grep -E "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-w</code></td>
-    <td>ตรงกับคำเท่านั้น</td>
-    <td><code>grep -w "คำ" filename</code></td>
-  </tr>
-  <tr>
-  <td><code>--color</code></td>
-  <td>ทำให้ข้อความที่ตรงกับ pattern มีสีเน้น</td>
-  <td><code>grep --color "pattern" filename</code></td>
-  <tr>
-    <td><code>-c</code></td>
-    <td>นับจำนวนบรรทัดที่ตรงกับ pattern</td>
-    <td><code>grep -c "pattern" filename</code></td>
-   </tr>
-  <tr>
-    <td><code>-l</code></td>
-    <td>แสดงเฉพาะชื่อไฟล์ที่มีข้อมูลที่ตรงกับ pattern</td>
-    <td><code>grep -l "pattern" *.txt</code></td>
-  </tr>
-  <tr>
-    <td><code>-f</code></td>
-    <td>อ่าน patternจากไฟล์</td>
-    <td><code>grep -f patterns.txt filename</code></td>
-  </tr>
-</table><br>
 
 >รูปเเเบบการค้นหา Option ที่น่าสนใจ
 

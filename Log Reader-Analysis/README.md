@@ -474,12 +474,10 @@ sed 's/old_string/new_string/g' filename.txt
 
 ```
 sed 's/old_string/new_string/#' filename.txt
-
 ```
 แทนที่ข้อความในบรรทัดที่ i-j ตามที่กำหนด
 ```
 sed 'i,j s/old_string/new_string/' filename.txt
-
 ```
 ลบข้อความในบรรทัดที่กำหนด(# = number)
 ```

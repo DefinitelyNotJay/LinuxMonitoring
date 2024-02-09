@@ -153,73 +153,6 @@ last
         - still logged in - หากผู้ใช้ยังคงเข้าสู่ระบบ
         - down - ระบบปิดการทำงานอย่างปกติ
         - qcrash - หากไม่มีรายการออกจากระบบในไฟล์ "/var/log/wtmp" โดยทั่วไปนี่หมายถึงว่าระบบล้มเหลว
-# Grep
-ใช้สำหรับค้นหาข้อความในไฟล์ข้อความหรือไฟล์ข้อความที่ส่งเข้ามาผ่านทางคอมไพเลอร์ แล้วแสดงบรรทัดที่ตรงกับข้อความที่กำหนด[4]
-## คำสั่ง grep [options] pattern [FILE][4]
-<table>
-<tr>
-    <th>Option</th>
-    <th>Description</th>
-    <th>Examples</th>
-  </tr>
-  <tr>
-    <td><code>-i</code></td>
-    <td>ไม่สนใจตัวอักษรพิมพ์ใหญ่หรือเล็กใน pattern</td>
-    <td><code>grep -i "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-r</code></td>
-    <td>อ่านไฟล์ทั้งหมดในแต่ละไดเรกทอรีและไดเรกทอรีย่อยๆ โดยอัตโนมัติ</td>
-    <td><code>grep -r "pattern" directory</code></td>
-  </tr>
-  <tr>
-    <td><code>-n</code></td>
-    <td>เติมหมายเลขบรรทัดของแต่ละบรรทัดในไฟล์เข้าไปด้วย โดยนับจากบรรทัดแรกเป็นบรรทัดที่ 1</td>
-    <td><code>grep -n "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-v</code></td>
-    <td>เลือกบรรทัดที่ไม่ตรงกับpattern</td>
-    <td><code>grep -v "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-E</code></td>
-    <td>ใช้ regular expressions ขั้นสูง (รองรับ ?, +, {}, () เป็นต้น)</td>
-    <td><code>grep -E "pattern" filename</code></td>
-  </tr>
-  <tr>
-    <td><code>-w</code></td>
-    <td>ตรงกับคำเท่านั้น</td>
-    <td><code>grep -w "คำ" filename</code></td>
-  </tr>
-  <tr>
-  <td><code>--color</code></td>
-  <td>ทำให้ข้อความที่ตรงกับ pattern มีสีเน้น</td>
-  <td><code>grep --color "pattern" filename</code></td>
-  <tr>
-    <td><code>-c</code></td>
-    <td>นับจำนวนบรรทัดที่ตรงกับ pattern</td>
-    <td><code>grep -c "pattern" filename</code></td>
-   </tr>
-  <tr>
-    <td><code>-l</code></td>
-    <td>แสดงเฉพาะชื่อไฟล์ที่มีข้อมูลที่ตรงกับ pattern</td>
-    <td><code>grep -l "pattern" *.txt</code></td>
-  </tr>
-  <tr>
-    <td><code>-f</code></td>
-    <td>อ่าน patternจากไฟล์</td>
-    <td><code>grep -f patterns.txt filename</code></td>
-  </tr>
-</table>
-
-> code example
-```c
-grep -c "hello" xxx.txt
-```
-นับจำนวนบรรทัดที่ตรงกับ pattern
-
-<img src="grep1.png" width=70%><br>
 
 # awk
 เป็นคำสั่งที่สามารถใช้แปลง, ค้นหา และ สร้างข้อมูลในรูปแบบ text ที่มีความซับซ้อนตามความต้องการของ user ได้ทุกรูปแบบ[5]
@@ -710,6 +643,63 @@ grap เป็นคำสั่งที่ใช้ค้นหารูปแ
 ผลลัพธ์ :
 
 <img src="grep.png"><br>
+## คำสั่ง grep [option]
+<table>
+<tr>
+    <th>Option</th>
+    <th>Description</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td><code>-i</code></td>
+    <td>ไม่สนใจตัวอักษรพิมพ์ใหญ่หรือเล็กใน pattern</td>
+    <td><code>grep -i "pattern" filename</code></td>
+  </tr>
+  <tr>
+    <td><code>-r</code></td>
+    <td>อ่านไฟล์ทั้งหมดในแต่ละไดเรกทอรีและไดเรกทอรีย่อยๆ โดยอัตโนมัติ</td>
+    <td><code>grep -r "pattern" directory</code></td>
+  </tr>
+  <tr>
+    <td><code>-n</code></td>
+    <td>เติมหมายเลขบรรทัดของแต่ละบรรทัดในไฟล์เข้าไปด้วย โดยนับจากบรรทัดแรกเป็นบรรทัดที่ 1</td>
+    <td><code>grep -n "pattern" filename</code></td>
+  </tr>
+  <tr>
+    <td><code>-v</code></td>
+    <td>เลือกบรรทัดที่ไม่ตรงกับpattern</td>
+    <td><code>grep -v "pattern" filename</code></td>
+  </tr>
+  <tr>
+    <td><code>-E</code></td>
+    <td>ใช้ regular expressions ขั้นสูง (รองรับ ?, +, {}, () เป็นต้น)</td>
+    <td><code>grep -E "pattern" filename</code></td>
+  </tr>
+  <tr>
+    <td><code>-w</code></td>
+    <td>ตรงกับคำเท่านั้น</td>
+    <td><code>grep -w "คำ" filename</code></td>
+  </tr>
+  <tr>
+  <td><code>--color</code></td>
+  <td>ทำให้ข้อความที่ตรงกับ pattern มีสีเน้น</td>
+  <td><code>grep --color "pattern" filename</code></td>
+  <tr>
+    <td><code>-c</code></td>
+    <td>นับจำนวนบรรทัดที่ตรงกับ pattern</td>
+    <td><code>grep -c "pattern" filename</code></td>
+   </tr>
+  <tr>
+    <td><code>-l</code></td>
+    <td>แสดงเฉพาะชื่อไฟล์ที่มีข้อมูลที่ตรงกับ pattern</td>
+    <td><code>grep -l "pattern" *.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-f</code></td>
+    <td>อ่าน patternจากไฟล์</td>
+    <td><code>grep -f patterns.txt filename</code></td>
+  </tr>
+</table><br>
 
 >รูปเเเบบการค้นหา Option ที่น่าสนใจ
 

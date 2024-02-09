@@ -1,106 +1,5 @@
-<!-- <h3>Journalctl<br></h3>
-<p>Journalctl  คือ คำสั่งในการที่เรียกดูบันทึกเหตุการณ์ทั้งหมดภายในระบบ  ซึ่งเป็นบันทึกกระบวนการต่างๆ คือ กระบวนการบูตก่อนหน้า, เคอร์เนล, initrd และข้อผิดพลาดของแอปพลิเคชัน ในรูปแบบไบนารี่</p> -->
-<!-- tail,grep,rsyslog,logrotate,Grep,Awk,Logstash,Splunk -->
-
-
-# lastcomm
-lastcomm เป็นคำสั่งที่ใช้แสดงประวัติการใช้งานของผู้ใช้ ที่บันทึกไว้ใน /var/account/pacct การเเสดงผลจะเรียงตามเวลาล่าสุดที่ทำงานไปก่อนหน้านั้น
-
-
-การใช้คำสั่ง lastcomm ต้องติดตั้งแพ็กเกจ acct โดยใช้
-
-<code>sudo apt update</code>
-
-<code>sudo apt install acct</code>
-
-เพราะ acct ช่วยในการบันทึกข้อมูลเหล่านี้ไว้ เป็นไฟล์ log โดยที่  log พวกนี้อยู่ใน /var/log/account/pacct หรือ /var/account/pacct
-
-
-ข้อมูลที่ lastcomm เเสดง คือ
-- ชื่อคำสั่ง
-- สถานะและการทำงานของกระบวนการ (Flags) <br>
-  ลักษณะของ flags มีดังนี้
-  - '<': แสดงว่ากระบวนการทำงานนี้มีการอ่านจากไฟล์
-  - '>': แสดงว่ากระบวนการทำงานนี้มีการเขียนลงไปในไฟล์
-  - 'C': กระบวนการทำงานเป็นของการควบคุมการเข้าถึงข้อมูล (Control process)
-  - 'E': กระบวนการทำงานเป็นของระบบการส่งออก
-  - 'X': แสดงว่ากระบวนการทำงานถูกติดตั้งเป็น setgid (set group ID)
-  - '+' (คำนำหน้า): แสดงว่าโปรแกรมนี้ถูกตรวจสอบสิทธิ์บนเครื่อง
-  - 'S': กระบวนการทำงานอยู่ในสถานะพร้อมทำงาน
-  - 'D': กระบวนการทำงานอยู่ในสถานะพักการทำงาน (uninterruptible sleep)
-  - 'R': กระบวนการทำงานอยู่ในสถานะรอการรัน<br>
-  - 'Z': กระบวนการทำงานเป็น zombie <br>
-<li>ชื่อผู้ใช้งาน</li>
-<li>หมายเลข PID (Process ID)</li>
-<li>เวลาที่กระบวนการเริ่มต้น-จบ</li>
-
-<img src="lastcomm.jpeg" width=90%>
-<img src="last2.jpeg" width=90%>
-
-## คำสั่ง lastcomm [option]
-<table>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-    <th>Examples</th>
-  </tr>
-  <tr>
-    <td><code>-c</code></td>
-    <td>แสดงชื่อของคำสั่งที่ใช้งาน</td>
-    <td><code>lastcomm -c</code></td>
-  </tr>
-  <tr>
-    <td><code>-d</code></td>
-    <td>แสดงรายการที่ใช้งานในวันที่ระบุ</td>
-    <td><code>lastcomm -d "2024-02-07"</code></td>
-  </tr>
-  <tr>
-    <td><code>-f</code></td>
-    <td>แสดงข้อมูลทั้งหมดที่มีอยู่</td>
-    <td><code>lastcomm -f</code></td>
-  </tr>
-  <tr>
-    <td><code>-h</code></td>
-    <td>ซ่อนส่วนหัวของผลลัพธ์</td>
-    <td><code>lastcomm -h</code></td>
-  </tr>
-  <tr>
-    <td><code>-l</code></td>
-    <td>แสดงข้อมูลเพิ่มเติมเกี่ยวกับโปรเซส เช่น uid, gid, tty, Nice value และ flags</td>
-    <td><code>lastcomm -l</code></td>
-  </tr>
-  <tr>
-    <td><code>-m</code></td>
-    <td>รายงานโปรเซสที่มีการสร้างโดย crontab</td>
-    <td><code>lastcomm -m</code></td>
-  </tr>
-  <tr>
-    <td><code>-r</code></td>
-    <td>แสดงผลลัพธ์ในลำดับย้อนหลัง</td>
-    <td><code>lastcomm -r</code></td>
-  </tr>
-  <tr>
-    <td><code>-s</code></td>
-    <td>แสดงรายการของคำสั่งที่ระบุเวลา</td>
-    <td><code>lastcomm -s "08:00" -s "17:00"</code></td>
-  </tr>
-  <tr>
-    <td><code>-t</code></td>
-    <td>แสดงรายการของคำสั่งที่ระบุเท่านั้น</td>
-    <td><code>lastcomm -t "bash"</code></td>
-  </tr>
-  <tr>
-    <td><code>-u</code></td>
-    <td>ระบุผู้ใช้งานที่ต้องการให้แสดงผล</td>
-    <td><code>lastcomm -u "username"</code></td>
-  </tr>
-</table>
-
->Option ที่น่าสนใจ
-
-
-
-
+# Log reader & Analysis
+Log reader & Analysis คือ การอ่านบันทึกข้อผิดพลาดหรือบันทึกข้อมูล และวิเคราะห์ข้อมูลที่บันทึกไว้ใน log files ของ linux โดย log ที่บันทึกไว้อาจเป็นข้อมูลเกี่ยวกับเหตุการณ์ที่เกิดขึ้นในระบบ เช่น บันทึกการเข้าสู่ระบบ, การเปิดและปิดเซสชัน, การเข้าถึงไฟล์, ข้อผิดพลาดในระบบ เช่น grep, tail, awk, sed
 
 # dmesg
 Demgs คือคำสั่งที่ใช้เพื่อแสดงข้อมูลจาก kernel ring buffer ซึ่งเป็นพื้นที่ในหน่วยความจำที่ใช้เก็บข้อมูลเกี่ยวกับเหตุการณ์ต่าง ๆ ที่เกิดขึ้นในระบบเมื่อระบบทำงาน รวมถึงข้อผิดพลาด (errors) และข้อความแจ้งเตือน (warnings) ต่าง ๆ ที่อาจเกิดขึ้นในเวลาที่ระบบเปิดใช้งานหรือในระหว่างการทำงาน[1]<br>
@@ -489,6 +388,101 @@ sed 'i,jd' filename.txt
 ```
 sed '#,$d' filename.txt
 ```
+# lastcomm
+lastcomm เป็นคำสั่งที่ใช้แสดงประวัติการใช้งานของผู้ใช้ ที่บันทึกไว้ใน /var/account/pacct การเเสดงผลจะเรียงตามเวลาล่าสุดที่ทำงานไปก่อนหน้านั้น
+
+
+การใช้คำสั่ง lastcomm ต้องติดตั้งแพ็กเกจ acct โดยใช้
+
+<code>sudo apt update</code>
+
+<code>sudo apt install acct</code>
+
+เพราะ acct ช่วยในการบันทึกข้อมูลเหล่านี้ไว้ เป็นไฟล์ log โดยที่  log พวกนี้อยู่ใน /var/log/account/pacct หรือ /var/account/pacct
+
+
+ข้อมูลที่ lastcomm เเสดง คือ
+- ชื่อคำสั่ง
+- สถานะและการทำงานของกระบวนการ (Flags) <br>
+  ลักษณะของ flags มีดังนี้
+  - '<': แสดงว่ากระบวนการทำงานนี้มีการอ่านจากไฟล์
+  - '>': แสดงว่ากระบวนการทำงานนี้มีการเขียนลงไปในไฟล์
+  - 'C': กระบวนการทำงานเป็นของการควบคุมการเข้าถึงข้อมูล (Control process)
+  - 'E': กระบวนการทำงานเป็นของระบบการส่งออก
+  - 'X': แสดงว่ากระบวนการทำงานถูกติดตั้งเป็น setgid (set group ID)
+  - '+' (คำนำหน้า): แสดงว่าโปรแกรมนี้ถูกตรวจสอบสิทธิ์บนเครื่อง
+  - 'S': กระบวนการทำงานอยู่ในสถานะพร้อมทำงาน
+  - 'D': กระบวนการทำงานอยู่ในสถานะพักการทำงาน (uninterruptible sleep)
+  - 'R': กระบวนการทำงานอยู่ในสถานะรอการรัน<br>
+  - 'Z': กระบวนการทำงานเป็น zombie <br>
+<li>ชื่อผู้ใช้งาน</li>
+<li>หมายเลข PID (Process ID)</li>
+<li>เวลาที่กระบวนการเริ่มต้น-จบ</li>
+
+<img src="lastcomm.jpeg" width=90%>
+<img src="last2.jpeg" width=90%>
+
+## คำสั่ง lastcomm [option]
+>Option ที่น่าสนใจ
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td><code>-c</code></td>
+    <td>แสดงชื่อของคำสั่งที่ใช้งาน</td>
+    <td><code>lastcomm -c</code></td>
+  </tr>
+  <tr>
+    <td><code>-d</code></td>
+    <td>แสดงรายการที่ใช้งานในวันที่ระบุ</td>
+    <td><code>lastcomm -d "2024-02-07"</code></td>
+  </tr>
+  <tr>
+    <td><code>-f</code></td>
+    <td>แสดงข้อมูลทั้งหมดที่มีอยู่</td>
+    <td><code>lastcomm -f</code></td>
+  </tr>
+  <tr>
+    <td><code>-h</code></td>
+    <td>ซ่อนส่วนหัวของผลลัพธ์</td>
+    <td><code>lastcomm -h</code></td>
+  </tr>
+  <tr>
+    <td><code>-l</code></td>
+    <td>แสดงข้อมูลเพิ่มเติมเกี่ยวกับโปรเซส เช่น uid, gid, tty, Nice value และ flags</td>
+    <td><code>lastcomm -l</code></td>
+  </tr>
+  <tr>
+    <td><code>-m</code></td>
+    <td>รายงานโปรเซสที่มีการสร้างโดย crontab</td>
+    <td><code>lastcomm -m</code></td>
+  </tr>
+  <tr>
+    <td><code>-r</code></td>
+    <td>แสดงผลลัพธ์ในลำดับย้อนหลัง</td>
+    <td><code>lastcomm -r</code></td>
+  </tr>
+  <tr>
+    <td><code>-s</code></td>
+    <td>แสดงรายการของคำสั่งที่ระบุเวลา</td>
+    <td><code>lastcomm -s "08:00" -s "17:00"</code></td>
+  </tr>
+  <tr>
+    <td><code>-t</code></td>
+    <td>แสดงรายการของคำสั่งที่ระบุเท่านั้น</td>
+    <td><code>lastcomm -t "bash"</code></td>
+  </tr>
+  <tr>
+    <td><code>-u</code></td>
+    <td>ระบุผู้ใช้งานที่ต้องการให้แสดงผล</td>
+    <td><code>lastcomm -u "username"</code></td>
+  </tr>
+</table>
+
+
 
 >Reference
 

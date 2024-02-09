@@ -850,7 +850,7 @@ logrotate ต้องมีสิทธิ์การเข้าถึงข�
 [5]https://saixiii.com/awk-linux-command/<br>
 [6]https://th.linux-console.net/?p=17513<br>
 [7]https://linuxize.com/post/awk-command/<br>
-[8]https://phoenixnap.com/kb/linux-sed
+[8]https://phoenixnap.com/kb/linux-sed<br>
 [9] https://www.howtogeek.com/499623/how-to-use-journalctl-to-read-linux-system-logs/ <br>
 [10] https://www.cyberciti.biz/faq/linux-unix-lastcomm-command-examples-usage-syntax/ <br>
 [11] https://phoenixnap.com/kb/linux-tail <br>

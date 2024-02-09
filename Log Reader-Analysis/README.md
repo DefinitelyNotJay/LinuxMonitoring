@@ -497,6 +497,6 @@ sed '#,$d' filename.txt
 [3]https://www.baeldung.com/linux/last-command<br>
 [4]https://www.hostinger.com/tutorials/grep-command-in-linux-useful-examples/#:~:text=to%20a%20File-,What%20Is%20the%20grep%20Command%20in%20Linux,see%20which%20lines%20contain%20it.<br>
 [5]https://saixiii.com/awk-linux-command/<br>
-[6]https://th.linux-console.net/?p=17513
-[7]https://linuxize.com/post/awk-command/
+[6]https://th.linux-console.net/?p=17513<br>
+[7]https://linuxize.com/post/awk-command/<br>
 [8]https://phoenixnap.com/kb/linux-sed#:~:text=The%20Linux%20sed%20command%20is%20most%20commonly%20used%20for%20substituting,%2F%20

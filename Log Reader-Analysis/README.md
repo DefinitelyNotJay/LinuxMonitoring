@@ -326,3 +326,170 @@ grep -c "hello" xxx.txt
 
 # awk
 เป็นคำสั่งที่สามารถใช้แปลง, ค้นหา และ สร้างข้อมูลในรูปแบบ text ที่มีความซับซ้อนตามความต้องการของ user ได้ทุกรูปแบบ
+- Awk มักถูกใช้ในการดำเนินการต่างๆ กับข้อมูลข้อความ เช่น
+    1. การค้นหาและแสดงข้อมูลที่ตรงตามเงื่อนไขที่กำหนด
+    2. การคำนวณค่าหรือการสร้างรายงานจากข้อมูล
+    3. การแปลงรูปแบบของข้อมูล เช่น การเปลี่ยนรูปแบบของข้อมูลจากไฟล์ล็อกเข้ารหัสเป็นข้อความที่อ่านได้ง่าย
+    4. การประมวลผลข้อมูลในรูปแบบของคอลัมน์และแถว
+## คำสั่ง awk 'pattern { action }' input-file
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Description</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Print</td>
+      <td>พิมพ์บรรทัดทั้งหมดที่ตรงกับเงื่อนไขที่กำหนด</td>
+      <td><code>awk '/pattern/ { print }' input-file</code></td>
+    </tr>
+    <tr>
+      <td>กำหนดค่า (Assignment)</td>
+      <td>กำหนดค่าให้กับตัวแปรตามเงื่อนไขที่กำหนด</td>
+      <td><code>awk '/pattern/ { var = $1 }' input-file</code></td>
+    </tr>
+    <tr>
+      <td>เงื่อนไข (Conditional Statements)</td>
+      <td>ทำตามเงื่อนไขที่กำหนด</td>
+      <td><code>awk '/pattern/ { if ($1 > 10) print $0 }' input-file</code></td>
+    </tr>
+    <tr>
+      <td>Looping</td>
+      <td>ทำซ้ำๆ สำหรับแต่ละบรรทัด</td>
+      <td><code>awk '{ for (i = 1; i <= NF; i++) print $i }' input-file</code></td>
+    </tr>
+    <tr>
+      <td>BEGIN & END Blocks</td>
+      <td>ทำการกระทำก่อนที่จะเริ่มการประมวลผลและหลังจากการประมวลผลสิ้นสุด</td>
+      <td><code>awk 'BEGIN { print "เริ่มการประมวลผล" } /pattern/ { print $0 } END { print "การประมวลผลเสร็จสิ้น" }' input-file</code></td>
+    </tr>
+    <tr>
+      <td>ฟังก์ชันที่มีอยู่ใน awk</td>
+      <td>ฟังก์ชันที่ให้มาให้ใช้ในการประมวลผลข้อมูล</td>
+      <td><code>awk '/pattern/ { len = length($1); print len }' input-file</code></td>
+    </tr>
+    <tr>
+      <td>Arrays</td>
+      <td>ใช้ในการจัดเก็บและประมวลผลข้อมูลในรูปแบบของอาร์เรย์</td>
+      <td><code>awk '{ count[$1]++ } END { for (word in count) print word, count[word] }' input-file</code></td>
+    </tr>
+  </tbody>
+</table>
+
+>code examples
+
+ใช้ white space เป็นตัวแบ่งข้อมูล field ($) โดย field number จะเริ่มต้นที่ 1 แต่ถ้าจะให้แสดงผลทั้งหมดจะใช้ $0
+```
+awk '{print $0}' saixiii.txt
+```
+output
+```
+line,1,Hello world!
+line,2,My name is saixiii
+line,3,Good Bye
+line,4,Bye
+```
+
+ใส่เงื่อนไขในการแสดงผล
+```
+awk -F',' '{if($2%2==1) {print $0}}' saixiii.txt
+```
+output
+```
+line,1,Hello world!
+line,3,Good Bye
+```
+
+# sed
+ใช้สำหรับแก้ไขและประมวลผลข้อมูลข้อความเป็นลำดับ โดยทำงานโดยอ่านข้อมูลจากแหล่งให้ได้ และส่งออกผลลัพธ์ไปยังอีกแหล่งหนึ่ง โดยจะทำการแก้ไขข้อมูลของแถวที่ตรงตามเงื่อนไขที่กำหนดไว้ หรือปฏิบัติการอื่น ๆ ตามคำสั่งที่ระบุ โดยการใช้งานผ่าน command line interface (CLI)
+
+## คำสั่ง sed [options] 'command' file
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+    <th>Examples</th>
+  </tr>
+  <tr>
+    <td><code>-n</code></td>
+    <td>ป้องกันการพิมพ์โดยอัตโนมัติของสเปซแพทเทิร์น</td>
+    <td><code>sed -n '1p' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-i</code></td>
+    <td>แก้ไขไฟล์ในที่ (ทำการสำรองไฟล์หากมีการระบุนามสกุล)</td>
+    <td><code>sed -i.bak 's/old/new/' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-e script</code></td>
+    <td>เพิ่มสคริปต์ไปยังคำสั่งที่จะประมวลผล</td>
+    <td><code>sed -e 's/old/new/' -e 's/foo/bar/' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-r</code></td>
+    <td>ช้ syntax ของ regular expression แบบขยาย</td>
+    <td><code>sed -r 's/regex/replacement/' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-f script-file</code></td>
+    <td>เพิ่มเนื้อหาของไฟล์สคริปต์ไปยังคำสั่งที่จะประมวลผล</td>
+    <td><code>sed -f script.sed file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-i.bak</code></td>
+    <td>สำรองไฟล์เดิมด้วยนามสกุล .bak ก่อนที่จะแก้ไขในที่</td>
+    <td><code>sed -i.bak 's/old/new/' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-u</code></td>
+    <td>เก็บข้อมูลเขียนจนกว่าจะมีการเกิดการขึ้นของบรรทัดในสเปซแพทเทิร์น</td>
+    <td><code>sed -u 's/old/new/' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-h</code></td>
+    <td>ป้อนเอ็นทรี่ไปยังคำสั่ง sed โดยไม่ระบุชื่อไฟล์ที่อยู่ในหัวข้อ</td>
+    <td><code>sed -n 's/old/new/' file.txt</code></td>
+  </tr>
+  <tr>
+    <td><code>-V</code></td>
+    <td>แสดงรายละเอียดเวอร์ชันของ sed</td>
+    <td><code>sed -V</code></td>
+  </tr>
+</table>
+
+>ข้อมูลเพิ่มเติม
+
+แทนที่ข้อความเก่าด้วยข้อความใหม่เฉพาะครั้งแรกที่พบในแต่ละบรรทัดของไฟล์
+```
+sed 's/old_string/new_string/' filename.txt
+```
+แทนที่ข้อความเก่าด้วยข้อความใหม่ทุกครั้งที่พบ โดยไม่จำกัดเพียงครั้งเดียวต่อบรรทัดเท่านั้น
+```
+sed 's/old_string/new_string/g' filename.txt
+```
+แทนที่ข้อความเก่าด้วยข้อความใหม่ในเฉพาะครั้งที่ #(1,2,..) ที่พบ
+
+```
+sed 's/old_string/new_string/#' filename.txt
+
+```
+แทนที่ข้อความในบรรทัดที่ i-j ตามที่กำหนด
+```
+sed 'i,j s/old_string/new_string/' filename.txt
+
+```
+ลบข้อความในบรรทัดที่กำหนด(# = number)
+```
+sed '#d' filename.txt
+```
+ลบข้อความในบรรทัดที่ i-j
+```
+sed 'i,jd' filename.txt
+```
+ลบเนื้อหาจากบรรทัดที่กำหนดจนถึงบรรทัดสุดท้ายของ file
+```
+sed '#,$d' filename.txt
+```

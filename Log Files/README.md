@@ -5,6 +5,12 @@
 <h2>กลุ่มLog fileหลัก</h2>
 <h3>/var/log/messages(Linux) หรือ /var/log/syslog(Ubuntu)</h3>
 <ul><li>เป็นไฟล์ที่เก็บmessage, activitiesทั้งหมดของระบบในระดับ global</li></ul>
+<h4>Syslog คืออะไร</h4>
+<p>Syslogคือมาตรฐานของการสร้างและส่งlogs คำว่า"syslog"อาจหมายถึงอย่างใดอย่างหนึ่งดังต่อไปนี้</p>
+<ol>
+  <li>Syslog serviceรับและประมวลผลmessagesและรอรับเหตุการณ์โดยการสร้างsocketที่ /dev/log ซึ่งapplicationต่างๆสามารถเข้ามาเขียนmessageในlog fileนี้ได้ ไม่ว่าจะเขียนจากlocalหรือจะเขียนแล้วส่งต่อไปให้remote serverก็ได้</li>
+  <li></li>
+</ol>
 <p>ตัวอย่าง</p>
 <img width="1470" alt="Screenshot 2567-02-06 at 10 43 48" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/d6ffaef0-f6fb-491a-9060-7eb5c21adbf6">
 <p style="font-size : 10px; color: red;" align = "center">การอ่านsyslogไฟล์โดยใช้ vi</p>
@@ -14,7 +20,10 @@
 <h2>กลุ่มการเข้าถึงและการยืนยันตัวตน(Access and Authentication)</h2>
 
 <h3>/var/log/auth.log</h3>
-<ul><li>เป็นlog fileที่แสดงการAuthentication(login), AuthorizationของUser</li></ul>
+<ul>
+  <li>เป็นlog fileที่เก็บeventเกี่ยวกับความปลอดภัย เช่น Authentication(login), AuthorizationของUser, การกระทำของ root user</li>
+  <li>UbuntuและDebianใช้auth.log Red Hat and CentOSใช้ secure</li>
+</ul>
 <img width="1114" alt="Screenshot 2567-02-06 at 11 20 35" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/c8cce327-910e-4af6-a8c6-81e38afedb74">
 <p align="center">การอ่านไฟล์auth ซึ่งแสดงการสร้างsessionให้ผู้ที่เข้าสู่ระบบ</p>  
 

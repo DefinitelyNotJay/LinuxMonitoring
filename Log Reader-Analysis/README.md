@@ -415,7 +415,7 @@ journalctl --since yesterday, journalctl –since -1d
 
 ผลลัพธ์ :
 
-<img src="journalct_since_re.png"><br>
+<img src="journalct_since-re.png"><br>
 
 ```cmd
 -p (priority)
@@ -635,6 +635,15 @@ tail เป็นการเเสดงเนื้อหาของไฟล
 # grep
 
 grap เป็นคำสั่งที่ใช้ค้นหารูปแบบข้อความ(นิพจน์)ที่อยู่ในไฟล์ และ แสดงบรรทัดในไฟล์ที่ตรงกับรูปแบบนั้น [12]
+
+คำสั่ง : 
+```cmd
+   grep "string" file name หรือ filename grep "string"
+```
+ผลลัพธ์ :
+
+<img src="grep.png"><br>
+
 ## คำสั่ง grep [options] pattern [FILE][4]
 <table>
 <tr>
@@ -693,23 +702,15 @@ grap เป็นคำสั่งที่ใช้ค้นหารูปแ
   </tr>
 </table>
 
-> code example
+>รูปเเเบบการค้นหา Option ที่น่าสนใจ
+
+- นับจำนวนบรรทัดที่ตรงกับ pattern
+
 ```c
 grep -c "hello" xxx.txt
 ```
-นับจำนวนบรรทัดที่ตรงกับ pattern
 
 <img src="grep1.png" width=70%><br>
-
-คำสั่ง : 
-```cmd
-   grep "string" file name หรือ filename grep "string"
-```
-ผลลัพธ์ :
-
-<img src="grep.png"><br>
-
->รูปเเเบบการค้นหา Option ที่น่าสนใจ
 
 - Ignoring case sensitivity คือ ค้นหา String ในไฟล์ โดย ไม่ต้องคำนึงถึง ตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก
   ```cmd

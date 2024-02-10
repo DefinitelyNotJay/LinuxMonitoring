@@ -13,10 +13,11 @@
   <li>Syslog messageคือทุกๆlogsที่ถูกformatedให้อยู่ในรูปsyslog message format</li>
 </ol>
 
-<div>
 <img width="527" alt="Screenshot 2567-02-09 at 16 27 08" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/0e940a53-c7e7-4c74-b820-577252717acf">
-  <div margin="300"> - syslog message format</div>
-</div>
+<p>syslog message format</p>
+
+
+<br>
 
 <p>ตัวอย่าง</p>
 <img width="1470" alt="Screenshot 2567-02-06 at 10 43 48" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/d6ffaef0-f6fb-491a-9060-7eb5c21adbf6">
@@ -34,6 +35,8 @@
 <img width="1114" alt="Screenshot 2567-02-06 at 11 20 35" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/c8cce327-910e-4af6-a8c6-81e38afedb74">
 <p align="center">การอ่านไฟล์auth ซึ่งแสดงการสร้างsessionให้ผู้ที่เข้าสู่ระบบ</p>  
 
+<br>
+
 <h3>/var/log/lastlog</h3>
 <ul>
   <li>เป็นlog fileที่แสดงการAuthentication(login), AuthorizationของUser</li>
@@ -46,6 +49,8 @@
 <img width="683" alt="Screenshot 2567-02-06 at 11 41 58" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/d6f627be-6322-4ee1-9147-c3c3a156c538">
 <p align = "center">การอ่านไฟล์โดยการใช้คำสั่งlastlog</p>
 
+<br>
+
 <h3>/var/log/btmp10</h3>
 <ul>
   <li>เก็บข้อมูลการพยายามloginที่failed</li>
@@ -56,19 +61,23 @@
 <img width="697" alt="Screenshot 2567-02-06 at 12 20 55" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/957f437f-9a81-4773-9af9-9ce776133210">
 <p align="center">การอ่านไฟล์โดยการใช้คำสั่ง last</p>
 
-<h3>/var/log/wtmp หรือ /var/log/utmp</h3>กด
+<br>
+
+<h3>/var/log/wtmp หรือ /var/log/utmp</h3>
 <ul>
   <li>เก็บข้อมูลการ logins/logouts</li>
 </ul>
 <img width="687" alt="Screenshot 2567-02-06 at 12 25 06" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/3baa37be-d739-4685-99b4-4fc1b2812a56">
 <p align="center">การอ่านwmtpไฟล์โดยการใช้คำสั่ง last</p>
 
+<br>
+
 <h3>/var/log/faillog</h3>
 <ul>
   <li>เก็บlog การloginที่ไม่สำเร็จของusers</li>
 </ul>
 <img width="401" alt="Screenshot 2567-02-06 at 12 44 03" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/e249c0ec-8212-4a09-ba93-fa0d57221968">
-<p align="center">การอ่านwmtpไฟล์โดยการใช้คำสั่ง last</p>
+<p align="center">การอ่านfaillogไฟล์โดยการใช้คำสั่ง last</p>
 
 <h2>กลุ่ม Package Install/uninstall</h2>
 <h3>/var/log/dpkg.log</h3>

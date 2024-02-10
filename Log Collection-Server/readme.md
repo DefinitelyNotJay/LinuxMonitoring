@@ -145,8 +145,8 @@
 </table>
 <blockquote>เพิ่มเติม file dir</blockquote>
 <ul>
-  <li>/etc/syslog.conf     	  ไฟล์ configuration</li>
-  <li>/var/run/syslog.pid  	  process id ของ syslogd ปัจจุบัน</li>
-  <li>/dev/log             	  ชื่อของ UNIX domain datagram log socket</li>
-  <li>/dev/klog, /proc/kmsg	  อุปกรณ์บันทึก kernel</li>
+  <li>/etc/syslog.conf     	  <blockquote>ไฟล์ configuration</blockquote></li>
+  <li>/var/run/syslog.pid  	  <blockquote>process id ของ syslogd ปัจจุบัน</blockquote></li>
+  <li>/dev/log             	  <blockquote>ชื่อของ UNIX domain datagram log socket</blockquote></li>
+  <li>/dev/klog, /proc/kmsg	  <blockquote>อุปกรณ์บันทึก kernel</blockquote></li>
 </ul>

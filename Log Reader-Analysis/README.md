@@ -415,7 +415,7 @@ journalctl --since yesterday, journalctl –since -1d
 
 ผลลัพธ์ :
 
-<img src="journalct_since-re.png"><br>
+<img src="journalct-since-re.png"><br>
 
 ```cmd
 -p (priority)

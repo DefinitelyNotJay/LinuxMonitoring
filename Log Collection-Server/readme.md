@@ -23,3 +23,34 @@
   <b>syslogd</b> daemon อ่าน Datagram Socket และส่งแต่ละบรรทัดข้อความไปยังปลายทางที่อธิบายโดยไฟล์ configuration <b>/etc/syslog.conf</b> 
   <p><b>syslogd</b> daemon อ่านไฟล์ configuration เมื่อเปิดใช้งานและเมื่อได้ hangup signal</p>
 </p>
+<h2>syslogd [Option]</h2>
+<table>
+  <tr>
+    <th>option</th>
+    <th>describe</th>
+  </tr>
+  <tr>
+    <td>-V</td>
+    <td>print  หมายเลขเวอร์ชัน</td>
+  </tr>
+  <tr>
+    <td>--help</td>
+    <td>แสดงข้อมูลความช่วยเหลือ</td>
+  </tr>
+  <tr>
+    <td>--usage</td>
+    <td>แสดงข้อมูลการใช้คำสั่งต่างๆ ของ syslogd</td>
+  </tr>
+  <tr>
+    <td>-d</td>
+    <td>เข้าสู่โหมดแก้ไขข้อบกพร่อง(debug mode) syslogd ไม่ได้ใส่ตัวเองในพื้นหลัง ไม่แยกและแสดงข้อมูลการดีบัก</td>
+  </tr>
+  <tr>
+    <td>-a</td>
+    <td>ระบุ socket เพิ่มเติมจากที่ syslogd ต้องรับฟัง นี่เป็นสิ่งจำเป็นถ้าคุณจะปล่อยให้ daemon บางตัวทำงานภายในสภาพแวดล้อม chroot()'ed คุณสามารถระบุ socket เพิ่มเติมได้สูงสุด 19 ช่อง</td>
+  </tr>
+  <tr>
+    <td>-f, --rcfile=FILE</td>
+    <td>ระบุชื่อ path ของ configuration file สำรอง มีค่าเริ่มต้นคือ system specific และแสดงในเอาต์พุตวิธีใช้</td>
+  </tr>
+</table>

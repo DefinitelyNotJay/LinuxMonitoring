@@ -51,6 +51,33 @@
   </tr>
   <tr>
     <td>-f, --rcfile=FILE</td>
-    <td>ระบุชื่อ path ของ configuration file สำรอง มีค่าเริ่มต้นคือ system specific และแสดงในเอาต์พุตวิธีใช้</td>
+    <td>ระบุชื่อ path ของ configuration file สำรอง มีค่าเริ่มต้นคือ system specific และแสดงใน output วิธีใช้</td>
+  </tr>
+  <tr>
+    <td> --rcdir=DIR</td>
+    <td>ระบุชื่อ path ของ configuration directory สำรอง ค่าเริ่มต้นคือ system specific และแสดงใน output วิธีใช้</td>
+  </tr>
+  <tr>
+    <td>-h, --hop</td>
+    <td>เปิดใช้งานการส่งต่อข้อความระยะไกล โดยค่าเริ่มต้น syslogd จะไม่ส่งต่อข้อความนั้นที่ได้รับจาก host ระยะไกล</td>
+  </tr>
+  <tr>
+    <td>-l</td>
+    <td>รายชื่อ host ที่คั่นด้วยเครื่องหมาย colon(:) ซึ่งควรได้รับการพิจารณาว่าเป็น local โดยจะถูกบันทึกไว้โดยใช้ host name แทนโดย FQDN</td>
+  </tr>
+  <tr>
+    <td>-m, --mark=INTERVAL/fP</td>
+    <td>เลือกจำนวนนาทีระหว่างข้อความ `` ทำเครื่องหมาย '' ค่าเริ่มต้นคือ 20 นาที หากตั้งเป็น 0 คือการปิดใช้งาน time stamp</td>
+  </tr>
+  <tr>
+    <td>-n, --no-detach</td>
+    <td>ระงับการทำงานเบื้องหลังและการปลด daemon จากการควบคุม terminal</td>
   </tr>
 </table>
+<blockquote>เพิ่มเติม file dir</blockquote>
+<ul>
+  <li>/etc/syslog.conf     	  ไฟล์ configuration</li>
+  <li>/var/run/syslog.pid  	  process id ของ syslogd ปัจจุบัน</li>
+  <li>/dev/log             	  ชื่อของ UNIX domain datagram log socket</li>
+  <li>/dev/klog, /proc/kmsg	  อุปกรณ์บันทึก kernel</li>
+</ul>

@@ -49,6 +49,13 @@
   <h4>สามารถเรียกใช้งานด้วยคอมมานด์ syslogd หรือ rsyslog</h4>
   <b>syslogd</b> daemon อ่าน Datagram Socket และส่งแต่ละบรรทัดข้อความไปยังปลายทางที่อธิบายโดยไฟล์ configuration <b>/etc/syslog.conf</b> 
   <p><b>syslogd</b> daemon อ่านไฟล์ configuration เมื่อเปิดใช้งานและเมื่อได้ hangup signal</p>
+  <h4>การเปิดปิด และตรวจสอบสถานะ</h4>
+  <img src="service_start.png">
+  <img src="service_stop.png">
+  <h4>การใช้ syslogd -d</h4>
+  <img src="syslogd_debug.png">
+  <h4>การใช้ syslogd -n(detach)</h4>
+  <img src="syslogd_detact.png">
 </p>
 <h2>syslogd [option]</h2>
 <table>

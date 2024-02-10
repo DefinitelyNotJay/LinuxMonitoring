@@ -415,7 +415,7 @@ journalctl --since yesterday, journalctl –since -1d
 
 ผลลัพธ์ :
 
-<img src="journalct_sin_re.png"><br>
+<img src="journalct_since_re.png"><br>
 
 ```cmd
 -p (priority)
@@ -506,7 +506,7 @@ acct ช่วยในการบันทึกข้อมูลเหล่
 ```
 ผลลัพธ์ :
 
-<img src="last.png" width=90%>
+<img src="lastcomm-re.png" width=90%>
 
 
 ## คำสั่ง lastcomm [option]
@@ -628,7 +628,7 @@ tail เป็นการเเสดงเนื้อหาของไฟล
   <tr>
     <td><code>--pid=PID</code></td>
     <td>ติดตามการเพิ่มข้อมูลล่าสุดจาก process ที่กำหนด</td>
-    <td><code>tail --pid=1234 access.log</code> (ติดตามการเพิ่มข้อมูลล่าสุดในไฟล์ access.log ที่ process หมายเลข 1234 สร้างข้อมูล)</td>
+    <td><code>tail --pid=5555 access.log</code> (ติดตามการเพิ่มข้อมูลล่าสุดในไฟล์ access.log ที่ process หมายเลข 1234 สร้างข้อมูล)</td>
   </tr>
 </table>
 
@@ -649,7 +649,7 @@ grap เป็นคำสั่งที่ใช้ค้นหารูปแ
   </tr>
   <tr>
     <td><code>-r</code></td>
-    <td>อ่านไฟล์ทั้งหมดในแต่ละไดเรกทอรีและไดเรกทอรีย่อยๆ โดยอัตโนมัติ</td>
+    <td>อ่านไฟล์ทั้งหมดในแต่ละไดเรกทอรีและไดเรกทอรีย่อยๆ</td>
     <td><code>grep -r "pattern" directory</code></td>
   </tr>
   <tr>
@@ -728,7 +728,7 @@ grep -c "hello" xxx.txt
    - ค้นหาข้อความที่มี "apple" หรือ "orange" ในไฟล์ fruits.
    txt: <code>grep "apple\|orange" fruits.txt</code>
     - ค้นหาบรรทัดที่ขึ้นต้นด้วย "apple" ในไฟล์ fruits.txt: <code>grep "^apple" fruits.txt</code>
-    - ค้นหาบรรทัดที่มี "banana" ซึ่งตามด้วย "s" หรือ "es" ในไฟล์ fruits.txt: <code>grep "banana[s|es]" fruits.txt</code>
+    - ค้นหาบรรทัดที่มี "banana" ซึ่งตามด้วย "s" หรือ "es" ในไฟล์ fruits.txt: <code>grep "pineapple[s|es]" fruits.txt</code>
     - ค้นหาบรรทัดที่มีตัวอักษร "a", "b", "c" อย่างน้อยหนึ่งครั้งในไฟล์ fruits.txt: <code>grep "[a-c]" fruits.txt</code>
 - ค้นหาการติดตั้งแพ็คเกจ
   ```cmd

@@ -570,9 +570,9 @@ acct ช่วยในการบันทึกข้อมูลเหล่
 
 >Option ที่น่าสนใจ
 
-<code>--strict-match</code> ระบุคำสั่งทีี่ต้องการค้นหา 
+<code>--strict-match</code> ระบุคำสั่งที่ต้องการค้นหา 
 ex. <code>lastcomm --strict-match rsync</code><br>
-<code>--tty name</code> แสดงรายการของคำสั่งที่ถูกเรียกใช้โดยกรองเฉพาะผู้ใช้ที่ และทำงานบน tty
+<code>--tty name</code> แสดงรายการของคำสั่งที่ถูกเรียกใช้โดยกรองเฉพาะผู้ใช้ที่ ที่ทำงานบน tty
 ex. <code>lastcomm --tty pts/0 name</code><br>
 
 คำสั่ง :

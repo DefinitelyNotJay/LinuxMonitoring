@@ -73,6 +73,22 @@
     <td>-n, --no-detach</td>
     <td>ระงับการทำงานเบื้องหลังและการปลด daemon จากการควบคุม terminal</td>
   </tr>
+  <tr>
+    <td>-p, --socket=PATH</td>
+    <td>ระบุชื่อ path ของ socket log สำรอง</td>
+  </tr>
+  <tr>
+    <td>-r, --inet</td>
+    <td>เปิดใช้งานเพื่อรับข้อความระยะไกลโดยใช้ internet domain socket</td>
+  </tr>
+  <tr>
+    <td>-s</td>
+    <td>list ของ domain name ซึ่งควรแยกออกจาก FQDN ของ host เมื่อ logging</td>
+  </tr>
+  <tr>
+    <td>--no-klog</td>
+    <td></td>
+  </tr>
 </table>
 <blockquote>เพิ่มเติม file dir</blockquote>
 <ul>

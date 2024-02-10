@@ -53,7 +53,7 @@
   <img src="service_start.png">
   <img src="service_stop.png">
   <h4>การใช้ syslogd -d</h4>
-  <img src="syslogd_debug.png">
+  <img src="syslod_debug.png">
   <h4>การใช้ syslogd -n(detach)</h4>
   <img src="syslogd_detact.png">
 </p>

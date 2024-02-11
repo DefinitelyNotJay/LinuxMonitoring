@@ -121,8 +121,9 @@
 
 <p align = "center">ไฟล์dmesgที่อ่านโดยการใช้คำสั่งlast</p>
 
-
-
+<h2>References</h2>
+Kyle Biniasz, (2023), What are Linux Logs? How to View Them, Most Important Directories & More. Retrieve 31 January 2024 from <br>
+<a target="_blank" href="https://stackify.com/linux-logs/">https://stackify.com/linux-logs/</a>
 
 
 

@@ -122,9 +122,19 @@
 <p align = "center">ไฟล์dmesgที่อ่านโดยการใช้คำสั่งlast</p>
 
 <h2>References</h2>
-Kyle Biniasz, (2023), What are Linux Logs? How to View Them, Most Important Directories & More. Retrieve 31 January 2024 from <br>
-<a target="_blank" href="https://stackify.com/linux-logs/">https://stackify.com/linux-logs/</a>
+Kyle Biniasz, (2023), What are Linux Logs? How to View Them, Most Important Directories & More, <br>Retrieve 31 January 2024 from 
+<a target = "_blank" href="https://stackify.com/linux-logs/">https://stackify.com/linux-logs/</a>
 
+
+Aiswarya S, (2023), Understanding Linux Logs: 16 Linux Log Files You Must be Monitoring, <br> Retrieve 2 February 2024 from 
+<a href="https://www.atatus.com/blog/linux-logs/#linux-logs">https://www.atatus.com/blog/linux-logs/#linux-logs</a> <br>
+
+Hewlett Packard Enterprise Development LP, (2024), Red Hat Enterprise Linux - What Are the Log Files That Are Located in /var/log and What Do They Do? <br> Retrieve 5 February 2024 from <a href="https://support.hpe.com/hpesc/public/docDisplay?docId=c02947726&docLocale=en_US">https://support.hpe.com/hpesc/public/docDisplay?docId=c02947726&docLocale=en_US</a>
+
+Netsurion, (-), Top 5 Linux log file groups in/var/log, <br> Retrieve 6 February 2024 from <a href="https://www.netsurion.com/articles/top-5-linux-log-file-groups-in-var-log">https://www.netsurion.com/articles/top-5-linux-log-file-groups-in-var-log</a>
+
+Quincy Dalton, (2023), Listing Installed Packages in Order of Installation Dates in Linux, <br> Retrieve 11 February 2024 from
+<a href = "https://www.baeldung.com/linux/list-packages-by-install-date">https://www.baeldung.com/linux/list-packages-by-install-date</a>
 
 
 

@@ -194,17 +194,32 @@
 <p>การแก้บั๊กในระบบ log collection หรือ log server เป็นกระบวนการที่มีขึ้นแต่ละระบบมีความซับซ้อนและความสำคัญแตกต่างกันไป ต่อไปนี้คือตัวอย่างของบางคำสั่งที่อาจจะเกิดปัญหาเมื่อใช้งาน
 <ol>
   <li><b>การบันทึกข้อมูล log ที่ไม่ถูกต้อง</b>
-    <br>```bash
-    echo "Error message" >> /var/log/syslog
-    ```
-
+    <br>echo "Error message" >> /var/log/syslog
   </li>
-  <li><b>การเข้าถึง log server ที่ไม่ได้รับอนุญาต</b></li>
-  <li><b>การส่งข้อมูล log ที่ไม่สมบูรณ์</b></li>
-  <li><b>การบันทึกเวลาที่ไม่ถูกต้อง</b></li>
-  <li><b>การเปลี่ยนแปลงสิทธิ์ (permissions) ของไฟล์ log</b></li>
-  <li><b>การดำเนินการใน log directory ที่ไม่ถูกต้อง</b></li>
-  <li><b>การใช้คำสั่งที่ไม่ถูกต้องในการเพิ่ม log</b></li>
+  <li><b>การเข้าถึง log server ที่ไม่ได้รับอนุญาต</b>
+  <br>scp /path/to/local/log/file.log user@logserver:/var/log/
+  <br><p>กรณีที่ไม่ได้รับอนุญาต, คำสั่งนี้อาจทำให้ไม่สามารถทำการคัดลอกไฟล์ log ไปยัง log server ได้</p>
+  </li>
+  <li><b>การส่งข้อมูล log ที่ไม่สมบูรณ์</b>
+  <br>cat /var/log/syslog | nc -u logserver 514
+  <br><p>ในกรณีนี้, คำสั่ง nc (netcat) อาจทำให้ข้อมูล log ถูกส่งไปยัง log server ไม่สมบูรณ์หรือเสียหาย</p>
+  </li>
+  <li><b>การบันทึกเวลาที่ไม่ถูกต้อง</b>
+  <br>date -s "2024-02-10 12:30:00"
+  <br><p>การตั้งค่าเวลาที่ไม่ถูกต้องบน log server สามารถทำให้ข้อมูล log ที่บันทึกไม่ถูกต้อง</p>
+  </li>
+  <li><b>การเปลี่ยนแปลงสิทธิ์ (permissions) ของไฟล์ log</b>
+  <br>chmod 000 /var/log/syslog
+  <br><p>การเปลี่ยนแปลงสิทธิ์ของไฟล์ log สามารถทำให้ log server ไม่สามารถเข้าถึงไฟล์ log ได้</p>
+  </li>
+  <li><b>การดำเนินการใน log directory ที่ไม่ถูกต้อง</b>
+  <br>rm -rf /var/log/
+  <br><p>การลบ directory ที่มีไฟล์ log ทั้งหมดอาจทำให้ข้อมูล log สูญหาย</p>
+  </li>
+  <li><b>การใช้คำสั่งที่ไม่ถูกต้องในการเพิ่ม log</b>
+  <br>logger -t "MyApp" "This is a log message"
+  <br><p>ในกรณีที่ใช้คำสั่ง logger โดยไม่ได้ระบุ tag หรือทำงานอย่างไม่ถูกต้อง, ข้อมูล log ที่เพิ่มเข้าไปอาจไม่ถูกต้อง</p>
+  </li>
 </ol></p>
 def hello_world():
 print("Hello, World!")

@@ -33,42 +33,52 @@
         <td>65070189</td>
         <td>นายมัรวาน สุหลง</td>
         <td>Log Collection / Server</td>
-       <td></td>
+       <img src="">
     </tr>
     <tr>
         <td>65070214</td>
         <td>นายศิรพัชร รัตนพาไชย</td>
         <td>Log reader & Analysis</td>
-       <td></td>
+       <td>![ป้อ](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/b170d0aa-5bd7-4bad-b857-0f8b0bcd5628)
+</td>
     </tr>
     <tr>
         <td>65070217</td>
         <td>นางสาวศิโรรัตน์ นามบุญ</td>
         <td>Log reader & Analysis</td>
-       <td></td>
+       <td>![เฟือง](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/0eb4624f-f948-46dd-833a-701908bf7506)
+</td>
     </tr>
     <tr>
         <td>65070222</td>
         <td>นายศุภกร สถิตย์สุข</td>
         <td>Log Files</td>
-       <td></td>
+       <td>![เจ](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/4fd6e122-abba-4f31-837e-ebf2418836c1)
+</td>
     </tr>
     <tr>
         <td>65070224</td>
         <td>นายศุภชัย มณีรัตน์</td>
         <td>Log Collection / Server</td>
-       <td></td>
+       <td>![ลี่](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/91f23d0d-1e9a-4064-a97e-c49fa5c2b03b)
+</td>
     </tr>
     <tr>
         <td>65070240</td>
         <td>นายสุทธิเกียรติ หัทยาสมบูรณ์</td>
         <td>Working with Texts</td>
-       <td></td>
+       <td>![เก้อ](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/e1beacb4-d907-465b-824c-be5c7b4cc8bb) </td>
     </tr>
     <tr>
         <td>65070224</td>
         <td>นายวงศกร พะวงษ์</td>
         <td>Working with Texts</td>
-       <td></td>
+       <td>![ปอน](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/38651329-fe85-44f0-9331-b0e2bf73783e)</td>
     </tr>
 </table>
+
+<h2>Present</h2>
+ผู้ช่วยศาสตราจารย์ ดร. สุเมธ ประภาวัต
+
+![100510_sumeth](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/7ac246b0-af5f-45c9-9593-24e3cfd1088c)
+

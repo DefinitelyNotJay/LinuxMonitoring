@@ -223,3 +223,6 @@
 </ol></p>
 <h1>ddd</h1>
 > code example
+```cmd
+  sudo dmesg --time-format=iso
+```

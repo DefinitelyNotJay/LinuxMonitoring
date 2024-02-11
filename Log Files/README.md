@@ -89,6 +89,20 @@
 <p align = "center">ข้อมูลในdpkg.log</p>
 <img width="813" alt="Screenshot 2567-02-06 at 23 15 00" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/0503b5bb-b72f-44a5-a03d-e2b5025aede9">
 <p align = "center">การหาstatus unpackedในdpkg.log file โดยใช้ grep</p>
+<p>ตัวอย่างการlogหาpackageที่ได้ทำการติดตั้ง</p>
+<ol>
+  <li>sudo apt-get update</li>
+  <img width="866" alt="Screenshot 2567-02-11 at 16 52 26" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/6039973f-252c-44c3-a957-87c9810775ef">
+
+  <li>sudo apt-get install mysql-server</li>
+<img width="574" alt="Screenshot 2567-02-11 at 16 55 36" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/6b7dd415-0ad4-43fc-b1f8-0988d1e862cc">
+
+
+  
+  <li>grep mysql dpkg.log เพื่อดูlogที่เกี่ยวข้องกับ mysql ที่ได้ติดตั้งไปเมื่อกี้</li>
+  <img width="870" alt="Screenshot 2567-02-11 at 16 58 13" src="https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/8657ec30-5bbe-4918-ba81-7968839b1444">
+
+</ol>
 
 <h2>กลุ่มSystem log files</h2>
 <h3>/var/log/kern.log</h3>

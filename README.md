@@ -32,43 +32,43 @@
     <tr>
         <td>65070189</td>
         <td>นายมัรวาน สุหลง</td>
-        <td></td>
+        <td>Log Collection / Server</td>
        <td></td>
     </tr>
     <tr>
         <td>65070214</td>
         <td>นายศิรพัชร รัตนพาไชย</td>
-        <td></td>
+        <td>Log reader & Analysis</td>
        <td></td>
     </tr>
     <tr>
         <td>65070217</td>
         <td>นางสาวศิโรรัตน์ นามบุญ</td>
-        <td></td>
+        <td>Log reader & Analysis</td>
        <td></td>
     </tr>
     <tr>
         <td>65070222</td>
         <td>นายศุภกร สถิตย์สุข</td>
-        <td></td>
+        <td>Log Files</td>
        <td></td>
     </tr>
     <tr>
         <td>65070224</td>
         <td>นายศุภชัย มณีรัตน์</td>
-        <td></td>
+        <td>Log Collection / Server</td>
        <td></td>
     </tr>
     <tr>
         <td>65070240</td>
         <td>นายสุทธิเกียรติ หัทยาสมบูรณ์</td>
-        <td></td>
+        <td>Working with Texts</td>
        <td></td>
     </tr>
     <tr>
         <td>65070224</td>
         <td>นายวงศกร พะวงษ์</td>
-        <td></td>
+        <td>Working with Texts</td>
        <td></td>
     </tr>
 </table>

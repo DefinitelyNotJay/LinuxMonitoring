@@ -65,7 +65,7 @@
         <td>Working with Texts</td>
        <td width="40%" align="center"><img src="./images/ger.jpeg" width="35%" align="center"></td>
     <tr>
-        <td>65070224</td>
+        <td>65070282</td>
         <td>นายวงศกร พะวงษ์</td>
         <td>Working with Texts</td>
        <td width="40%" align="center"><img src="./images/pond.jpeg" width="35%" align="center"></td>

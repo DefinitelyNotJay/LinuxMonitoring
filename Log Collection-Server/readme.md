@@ -196,7 +196,8 @@
   <li><b>การบันทึกข้อมูล log ที่ไม่ถูกต้อง</b>
   </li>
   > code examples
-```cmd
-  sudo dmesg --time-format=iso
+```python
+def hello_world():
+print("Hello, World!")
 ```
 </ol></p>

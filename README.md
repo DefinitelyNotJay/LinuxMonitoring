@@ -74,5 +74,5 @@
 <h2>Present</h2>
 ผู้ช่วยศาสตราจารย์ ดร. สุเมธ ประภาวัต
 
-![100510_sumeth](https://github.com/DefinitelyNotJay/LinuxMonitoring/assets/81279337/7ac246b0-af5f-45c9-9593-24e3cfd1088c)
+<img src="./images/100510_sumeth.png" width="200px">
 

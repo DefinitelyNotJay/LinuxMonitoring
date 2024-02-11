@@ -221,3 +221,8 @@
   <br><p>ในกรณีที่ใช้คำสั่ง logger โดยไม่ได้ระบุ tag หรือทำงานอย่างไม่ถูกต้อง, ข้อมูล log ที่เพิ่มเข้าไปอาจไม่ถูกต้อง</p>
   </li>
 </ol></p>
+<h2>Reference</h2>
+<ul>
+  <li><a href="https://manpages.ubuntu.com/manpages/xenial/man8/syslogd.8.html">Ubuntu manuals</a></li>
+  <li><a href="https://link.springer.com/book/10.1007/978-1-4302-1890-6">The begining Linux Command line</a></li>
+</ul>
